@@ -1,0 +1,135 @@
+---
+import "../styles/global.css";
+import GenieOverlay from "../components/GenieOverlay.astro";
+import { Image } from "astro:assets";
+import costinChess from "../assets/costin-cozianu-chess.jpg";
+const description =
+  "A personal home for your code, projects, tools, and the knowledge behind them. For students, hobbyists, and professionals. DevCapsule is our first step.";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MyCodeSpace — Your code. Your projects. Your own space.</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f5f3ed" />
+    <link rel="canonical" href="https://mycodespace.ai/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="MyCodeSpace — Your code. Your projects. Your own space."
+    />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://mycodespace.ai/" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">
+      Skip to content
+    </a>
+    <div class="page">
+      <header class="site-header">
+        <a class="wordmark" href="/" aria-label="MyCodeSpace home">
+          <span class="mark" aria-hidden="true">
+            m<span>c</span>
+          </span>
+          mycodespace<span class="domain">.ai</span>
+        </a>
+        <a class="header-link" href="https://devcapsule.mycodespace.ai/">
+          Meet DevCapsule <span aria-hidden="true">↗</span>
+        </a>
+      </header>
+      <main id="main">
+        <section class="intro" aria-labelledby="intro-title">
+          <section class="contact" aria-labelledby="contact-title">
+            <Image
+              class="contact-photo"
+              src={costinChess}
+              alt="Costin on the left, concentrating on the chessboard in front of him."
+              widths={[320, 640]}
+              sizes="(min-width: 951px) 269px, (max-width: 700px) calc(100vw - 89px), 640px"
+              width={640}
+              height={512}
+              fit="cover"
+              position="left"
+              format="webp"
+            />
+            <p class="contact-invitation">
+              Curious? Want to find out more? Want to contribute?
+            </p>
+            <h2 id="contact-title">Get in touch with Costin!</h2>
+            <div class="contact-options">
+              <div class="contact-email">
+                <span>Email</span>
+                <img src="/contact-email.svg" width="173" height="28"
+                  alt="ccozianu at acm dot org" />
+              </div>
+              <a href="https://github.com/ccozianu">GitHub <span aria-hidden="true">↗</span></a>
+              <a href="https://www.linkedin.com/in/costin-cozianu-0a36a95/">LinkedIn <span aria-hidden="true">↗</span></a>
+            </div>
+          </section>
+          <h1 id="intro-title">
+            Your code. Your projects.
+            <br />
+            <em>Your own space.</em>
+          </h1>
+
+          <p class="lead">
+            Everything you build deserves a home. A place where your projects,
+            tools, and the knowledge behind them stay together, ready whenever
+            you need them.
+          </p>
+          <div class="idea">
+            <p>
+              Google’s engineers have google3: a shared home for much of the
+              company’s code, with projects across Google within reach. We think
+              something like that should be available to anyone who writes
+              software—students, hobbyists, and professionals alike.
+            </p>
+            <p>
+              That’s the ambition behind MyCodeSpace: your own personal
+              codespace, where a weekend experiment and years of professional
+              work can belong side by side.
+            </p>
+          </div>
+        </section>
+        <section class="product" aria-labelledby="product-title">
+          <div class="product-note">
+            <span class="product-number">01</span>
+            <p>Our first product</p>
+          </div>
+          <div class="product-body">
+            <div class="product-heading">
+              <h2 id="product-title">
+                DevCapsule<span aria-hidden="true">.</span>
+              </h2>
+              <span class="badge">Available now</span>
+            </div>
+            <p>
+              A real IDE and your choice of coding agent, in a workspace you can
+              close and come back to. Your tools, settings, and project
+              knowledge stay with you.
+            </p>
+            <a class="button" href="https://devcapsule.mycodespace.ai/">
+              Explore DevCapsule <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </section>
+        <aside class="next">
+          <p>
+            DevCapsule is our first step.
+            <br />
+            <strong>There’s more to follow.</strong>
+          </p>
+        </aside>
+      </main>
+      <footer>
+        <span>MyCodeSpace</span>
+        <span>A home for everything you build.</span>
+      </footer>
+      <GenieOverlay />
+    </div>
+  </body>
+</html>
